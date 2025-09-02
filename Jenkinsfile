@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GIT_COMMIT = "${env.GIT_COMMIT ?: 'latest'}"
-        IMAGE = "miteshsaste/devops-nodejs-app:${GIT_COMMIT}"
+        IMAGE = "akshayjarad/devops-nodejs-app:${GIT_COMMIT}"
         SSH_KEY_PATH = '/var/lib/jenkins/.ssh/devops-server-key' 
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/Mitesh-Saste/nodejs-devops-pipeline.git'
+                git branch: 'main', url: 'https://github.com/AkshayJarad/devops-pipeline-case-study.git'
             }
         }
 
