@@ -2,7 +2,7 @@
 set -euo pipefail
 
 GIT_COMMIT=${GIT_COMMIT:-latest}
-IMAGE="miteshsaste/devops-nodejs-app:$GIT_COMMIT"
+IMAGE="akshayjarad/devops-nodejs-app:$GIT_COMMIT"
 
 echo "Building Docker Image: $IMAGE"
 docker build -t "$IMAGE" .
